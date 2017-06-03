@@ -1,0 +1,167 @@
+.multiplex {
+  display: flex !important;
+
+  .image {
+    display: flex;
+    width: 520px;
+    height: 707px;
+    margin: auto 0;
+
+  }
+  .key-points {
+    font-size: 36px;
+    margin: 0 120px;
+  }
+}
+
+.server-push {
+  display: flex !important;
+  .image {
+    width: 780px;
+    height: 440px;
+    margin: auto 0;
+  }
+  .key-points {
+    font-size: 30px;
+    margin: 0 120px;
+  }
+}
+
+.binary-nature {
+  display: flex !important;
+  .wrap {
+    margin: auto 0;
+    background-color: white;
+    height: auto;
+
+  }
+  .image {
+    width: 100%;
+    padding: 50px 0;
+    margin: 0;
+    height: 140px;
+  }
+  .key-points {
+    font-size: 26px;
+    margin: 0 50px;
+  }
+}
+
+.h-pack {
+  display: flex !important;
+  .image {
+    width: 780px;
+    height: 400px;
+    margin: auto 0;
+  }
+  .key-points {
+    font-size: 30px;
+    margin: 0 120px;
+  }
+}
+
+.compare-table {
+  color: white;
+  display: flex !important;
+  font-size: 30px !important;
+
+}
+
+.winner {
+  color: cornflowerblue;
+}
+
+.Tsize-header {
+  color: white;
+  display: flex !important;
+
+  .wrap {
+    display: flex;
+    background-color: white;
+    width: 50%;
+    height: auto;
+    flex-direction: column;
+
+    .image {
+      display: flex;
+      width: 100%;
+      margin: 30px auto;
+    }
+  }
+
+  .title-wrap {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-content: space-between;
+    margin: 0 100px;
+
+    .title {
+      font-size: 32px;
+      margin-bottom: 50px;
+    }
+    .desc {
+      font-size: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: auto;
+      margin-bottom: 0;
+      flex-direction: column;
+
+      span {
+        display: block;
+      }
+    }
+  }
+}
+
+.Xsize-header {
+  color: white;
+  display: flex !important;
+  flex-direction: column;
+
+  .title {
+    display: block;
+    font-size: 30px;
+    margin: 0;
+  }
+  .wrap {
+    display: flex;
+    background-color: white;
+    width: 100%;
+    height: auto;
+    margin: 50px 0;
+
+    .image {
+      display: flex;
+      width: 100%;
+      margin: 15px 0 0;
+      border: none;
+
+      &:first-child {
+        margin-left: 15px;
+      }
+
+    }
+  }
+
+  .title-wrap {
+    display: flex;
+    width: 100%;
+
+    .desc {
+      font-size: 26px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: auto;
+      margin-bottom: 0;
+
+      span {
+        display: block;
+      }
+    }
+  }
+}
