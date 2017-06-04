@@ -1359,57 +1359,109 @@ body {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important; }
+  .multiplex .main {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .multiplex .image {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 520px;
-    height: 707px;
-    margin: auto 0; }
+    margin: auto 0;
+    width: 30%; }
   .multiplex .key-points {
-    font-size: 36px;
-    margin: 0 120px; }
+    margin: auto 120px; }
+    .multiplex .key-points .point {
+      font-size: 40px;
+      margin: 50px 0; }
 
 .server-push {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important; }
+  .server-push .main {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .server-push .image {
-    width: 780px;
-    height: 440px;
-    margin: auto 0; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto 0;
+    width: 60%; }
   .server-push .key-points {
-    font-size: 30px;
-    margin: 0 120px; }
+    margin: auto 120px; }
+    .server-push .key-points .point {
+      font-size: 40px;
+      margin: 50px 0; }
 
 .binary-nature {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important; }
-  .binary-nature .wrap {
-    margin: auto 0;
-    background-color: white;
-    height: auto; }
+  .binary-nature .main {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .binary-nature .image {
-    width: 100%;
-    padding: 50px 0;
-    margin: 0;
-    height: 140px; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto 0;
+    width: 60%; }
   .binary-nature .key-points {
-    font-size: 26px;
-    margin: 0 50px; }
+    margin: auto 120px; }
+    .binary-nature .key-points .point {
+      font-size: 40px;
+      margin: 50px 0; }
 
 .h-pack {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important; }
+  .h-pack .main {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .h-pack .image {
-    width: 780px;
-    height: 400px;
-    margin: auto 0; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto 0;
+    width: 65%; }
   .h-pack .key-points {
-    font-size: 30px;
-    margin: 0 120px; }
+    margin: auto 120px; }
+    .h-pack .key-points .point {
+      font-size: 40px;
+      margin: 50px 0; }
 
 .compare-table {
   color: white;
@@ -1436,7 +1488,9 @@ body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column; }
+            flex-direction: column;
+    -ms-flex-item-align: start;
+        align-self: flex-start; }
     .Tsize-header .wrap .image {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1532,3 +1586,19 @@ body {
       margin-bottom: 0; }
       .Xsize-header .title-wrap .desc span {
         display: block; }
+
+.final-slide {
+  background: url("../img/final.jpg") no-repeat;
+  background-size: contain;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around; }
+  .final-slide h3 {
+    display: block;
+    margin: 3% 0 !important; }

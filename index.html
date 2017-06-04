@@ -25,29 +25,25 @@
 <div class="reveal">
     <div class="slides">
         <section class="multiplex custom">
-            <section>
+            <section class="main">
                 <h2>Multiplex</h2>
-                <img src="img/multiplex.png" alt="Multiplex" class="image" style=" width: 520px;
-    height: 707px;">
+                <img src="img/multiplex.png" alt="Multiplex" class="image">
             </section>
-
             <section>
                 <ul class="key-points">
                     <li class="point">
-                        <p class="text">Параллельные мультиплексированные запросы и ответы не блокируют друг друга.</p>
-                    </li>
-                    <li class="point">
                         <p class="text">
-                            Несмотря на передачу многочисленных потоков данных, для наибольшей эффективности
-                            использования
-                            сетевых ресурсов используется одиночное TCP-соединение.
+                            Параллельные запросы и ответы не блокируют друг друга
                         </p>
                     </li>
                     <li class="point">
                         <p class="text">
-                            Больше не нужно применять оптимизационные хаки, наподобие спрайтов, конкатенации,
-                            фрагментирования доменов и прочих, которые негативно сказываются на других сферах сетевой
-                            производительности.
+                            Используется одиночное TCP-соединение.
+                        </p>
+                    </li>
+                    <li class="point">
+                        <p class="text">
+                            Оптимизационные хаки больше не нужны
                         </p>
                     </li>
                     <li class="point">
@@ -55,184 +51,110 @@
                             Задержки ниже, производительность сети выше, лучше ранжирование поисковыми системами.
                         </p>
                     </li>
-                    <li class="point">
-                        <p class="text">
-                            В сети и IT-ресурсах уменьшаются операционные расходы и капитальные вложения.
-                        </p>
-                    </li>
                 </ul>
             </section>
         </section>
         <section class="server-push custom">
-            <img src="img/server-push.png" alt="Server push" class="image">
-            <ul class="key-points">
-                <li class="point">
-                    <p class="text">
-                        Инициативно передаваемые ресурсы сохраняются в кэше клиента.
-                    </p>
-                </li>
-                <li class="point">
-                    <p class="text">
-                        Клиент может многократно использовать эти ресурсы на разных страницах.
-                    </p>
-                </li>
-                <li class="point">
-                    <p class="text">
-                        Сервер может мультиплексировать инициативно передаваемые ресурсы вместе с запрошенной
-                        информацией в рамках того же TCP-соединения.
-                    </p>
-                </li>
-                <li class="point">
-                    <p class="text">
-                        Сервер может приоритезировать инициативно передаваемые ресурсы. Это ключевое отличие с точки
-                        зрения производительности между HTTP/2 и HTTP 1.
-                    </p>
-                </li>
-                <li class="point">
-                    <p class="text">
-                        Клиент может отклонить инициативно передаваемые ресурсы для поддержания эффективности
-                        репозитория, или может вообще отключить функцию Server Push.
-                    </p>
-                </li>
-                <li class="point">
-                    <p class="text">
-                        Клиент может также ограничивать количество одновременно мультиплексированных потоков с
-                        инициативно передаваемыми данными.
-                    </p>
-                </li>
-            </ul>
-        </section>
-        <section class="binary-nature custom">
-            <section>
-                <h2>Бинарный протокол</h2>
-                <img src="img/binary-nature.png" alt="Binary Nature" class="image" style=" width: 65%" ;>
+            <section class="main">
+                <h2>Server Push</h2>
+                <img src="img/server-push.png" alt="Server push" class="image">
             </section>
             <section>
                 <ul class="key-points">
                     <li class="point">
                         <p class="text">
-                            Низкие накладные расходы при парсинге данных — критически важное преимущество HTTP/2 по
-                            сравнению с HTTP 1.
+                            Передаваемые ресурсы сохраняются в кэше клиента
                         </p>
                     </li>
                     <li class="point">
                         <p class="text">
-                            Ниже вероятность ошибок.
+                            Клиент может многократно использовать эти ресурсы на разных страницах
                         </p>
                     </li>
                     <li class="point">
                         <p class="text">
-                            Меньше нагрузка на сеть.
+                            Сервер может мультиплексировать передаваемые ресурсы вместе с запрошенной
+                            информацией в рамках одного TCP-соединения
                         </p>
                     </li>
                     <li class="point">
                         <p class="text">
-                            Эффективное использование сетевых ресурсов.
+                            Сервер может приоритезировать передаваемые ресурсы. Ключевое отличие в производительности от HTTP/1
                         </p>
                     </li>
                     <li class="point">
                         <p class="text">
-                            Решение проблем с безопасностью, наподобие атак с разделением запросов (response splitting
-                            attack), проистекающих из текстовой природы HTTP 1.x.
+                            Клиент может отключить функцию Server Push или ограничить кол-во мультиплексированных потоков
+                        </p>
+                    </li>
+                </ul>
+            </section>
+        </section>
+        <section class="binary-nature custom">
+            <section class="main">
+                <h2>Бинарный протокол</h2>
+                <img src="img/binary.png" alt="Binary Nature" class="image" style=" width: 65%" ;>
+            </section>
+            <section>
+                <ul class="key-points">
+                    <li class="point">
+                        <p class="text">
+                            Низкие расходы при парсинге данных. Ключевое преимущество HTTP/2 над HTTP 1
                         </p>
                     </li>
                     <li class="point">
                         <p class="text">
-                            Реализуются прочие возможности HTTP/2, включая сжатие, мультиплексирование, приоритезацию,
-                            управление потоками и эффективную обработку TLS.
+                            Меньше нагрузка на сеть, ниже вероятность ошибок
                         </p>
                     </li>
                     <li class="point">
                         <p class="text">
-                            Компактность команд упрощают их обработку и реализацию.
+                            Решение проблем с безопасностью, выше эффективность и устойчивость к сбоям при обработке данных
                         </p>
                     </li>
                     <li class="point">
                         <p class="text">
-                            Выше эффективность и устойчивость к сбоям при обработке данных, передаваемых между клиентом
-                            и
-                            сервером.
+                            Реализует прочие возможности HTTP/2: сжатие, мультиплексирование, приоритезацию и т.д.
                         </p>
                     </li>
                     <li class="point">
                         <p class="text">
-                            Снижение сетевой задержки и повышение пропускной способности.
+                            Снижение сетевой задержки и повышение пропускной способности
                         </p>
                     </li>
                 </ul>
             </section>
         </section>
         <section class="h-pack custom">
-            <img src="img/hpack.png" alt="H-pack" class="image">
-            <ul class="key-points">
-                <li class="point">
-                    <p class="text">
-                        Эффективную приоритезацию потоков.
-                    </p>
-                </li>
-                <li class="point">
-                    <p class="text">
-                        Эффективное использование механизмов мультиплексирования.
-                    </p>
-                </li>
-                <li class="point">
-                    <p class="text">
-                        Снижает накладные расходы при использовании ресурсов. Это один из первых вопросов, обсуждаемых
-                        при сравнении HTTP/2 с HTTP 1 и SPDY.
-                    </p>
-                </li>
-                <li class="point">
-                    <p class="text">
-                        Кодирование больших и часто используемых заголовков, что позволяет не отправлять весь фрейм с
-                        заголовком. Передаваемый размер каждого потока быстро уменьшается.
-                    </p>
-                </li>
-                <li class="point">
-                    <p class="text">
-                        Устойчивость к атакам, например, CRIME — эксплойтам потоков данных со сжатыми заголовками.
-                    </p>
-                </li>
-            </ul>
-        </section>
-        <section class="compare-table">
-            <table>
-                <tbody>
-                <tr>
-                    <th>HTTP 1.x</th>
-                    <th>SPDY</th>
-                    <th>HTTP2</th>
-                </tr>
-                <tr>
-                    <td>SSL не требуется, но рекомендуется.</td>
-                    <td>Необходим SSL.</td>
-                    <td>SSL не требуется, но рекомендуется.</td>
-                </tr>
-                <tr>
-                    <td>Медленное шифрование.</td>
-                    <td>Быстрое шифрование.</td>
-                    <td>Шифрование стало ещё быстрее.</td>
-                </tr>
-                <tr>
-                    <td>Один клиент-серверный запрос на одно TCP-соединение.</td>
-                    <td>Много клиент-серверных запросов на одно TCP-соединение. Осуществляются одновременно на одном
-                        хосте.
-                    </td>
-                    <td>Многохостовое мультиплексирование. Осуществляются на нескольких хостах в одном экземпляре.</td>
-                </tr>
-                <tr>
-                    <td>Нет сжатия заголовков.</td>
-                    <td>Введено сжатие заголовков.</td>
-                    <td>Используются улучшенные алгоритмы сжатия заголовков, что повышает производительность и
-                        безопасность.
-                    </td>
-                </tr>
-                <tr>
-                    <td>Нет приоритезации потоков.</td>
-                    <td>Введена приоритезация потоков.</td>
-                    <td>Улучшенные механизмы приоритезации потоков.</td>
-                </tr>
-                </tbody>
-            </table>
+            <section class="main">
+                <h2>HPack</h2>
+                <img src="img/hpack.png" alt="H-pack" class="image">
+            </section>
+            <section>
+                <ul class="key-points">
+                    <li class="point">
+                        <p class="text">
+                            Эффективная приоритезацию потоков
+                        </p>
+                    </li>
+                    <li class="point">
+                        <p class="text">
+                            Эффективное использование механизмов мультиплексирования
+                        </p>
+                    </li>
+                    <li class="point">
+                        <p class="text">
+                            Снижает накладные расходы при использовании ресурсов. Опять же - ключевое преимущество HTTP/2 над конкурентами
+                        </p>
+                    </li>
+                    <li class="point">
+                        <p class="text">
+                            Кодирование больших и часто используемых заголовков - позволяет не отправлять весь фрейм с
+                            заголовком
+                        </p>
+                    </li>
+                </ul>
+            </section>
         </section>
         <section class="Tsize-header">
             <div class="wrap fragment">
@@ -241,77 +163,67 @@
                 <img src="img/test_http2_headers.png" alt="" class="image -http2">
             </div>
             <div class="title-wrap">
-                <h3 class="title">Test #1 – Size of Request and Response Headers</h3>
-                <h3 class="desc fragment">
-                    <span class="winner">WINNER: HTTP/2</span> <br><br>
-                    <span>HTTP/2 has significantly smaller header sizes due to its use of the HPACK algorithm.</span>
-                </h3>
+                <h3 class="title">Тест #1 – Размер заголовков</h3>
+                <div class="desc fragment">
+                    <span class="winner">ПОБЕДИТЕЛЬ: HTTP/2</span> <br><br>
+                    <span>HTTP/2 имеет ощутимо меньший размер заголовков, благодаря использованию алгоритма HPack</span>
+                </div>
             </div>
         </section>
         <section class="Tsize-header">
-            <h3 class="title">Test #1 – Size of Request and Response Headers</h3>
             <div class="wrap fragment">
                 <img src="img/test_http1_headers.png" alt="" class="image -http">
                 <img src="img/test_spdy_headers.png" alt="" class="image -spdy">
                 <img src="img/test_http2_headers.png" alt="" class="image -http2">
             </div>
-            <h3 class="fragment">WINNER: SPDY</h3>
-            <p class="fragment">he larger response bodies seen on the Google servers are due to the use of padding in
-                data frames.
-                Although, HTTP/2 p</p>
-
-        </section>
-        <section class="Tsize-header">
-            <div class="wrap">
-                <img src="img/test_https_response.png" alt="" class="image -http">
-                <img src="img/test_spdy_response.png" alt="" class="image -spdy">
-                <img src="img/test_http2_response.png" alt="" class="image -http2">
-            </div>
             <div class="title-wrap">
-                <h3 class="title">Test #2: Size of Response Message</h3>
-                <h3 class="desc">
-                    <span class="winner">WINNER: SPDY</span> <br><br>
-                    <span>The larger response bodies seen on the Google servers are due to the use of padding in data frames.
-                    Although, HTTP/2 produces larger responses than SPDY its encrypted connections could potentially be
-                    more secure. This may be an area where tuning can be performed in a trade off between security and
-                    performance.
+                <h3 class="title">Тест #2 – Размер сообщения ответа</h3>
+                <div class="desc fragment">
+                    <span class="winner">ПОБЕДИТЕЛЬ: SPDY</span><br><br>
+                    <span>Хотя у HTTP/2 больший по размеру ответ, чем у SPDY, его зашифрованные соединения потенциально могут быть более безопасными. Это ставит нас перед выбором между безопасностью и производительностью.
                     </span>
-                </h3>
+                </div>
             </div>
 
         </section>
         <section class="Xsize-header">
-            <h3 class="title">Test #3 : Number of TCP Connects and SSL Handshakes Required During Page Load</h3>
-            <div class="wrap">
+            <span class="title">Тест #3 : Кол-во TCP-соединений и SSL Handshakes требуемое в процессе загрузки страницы</span>
+            <div class="wrap fragment">
                 <img src="img/test_https_connections.png" alt="" class="image -http">
                 <img src="img/test_spdy_connections.png" alt="" class="image -spdy">
                 <img src="img/test_http2_connections.png" alt="" class="image -http2">
             </div>
-            <div class="title-wrap">
+            <div class="title-wrap fragment">
                 <h3 class="desc">
-                    <span class="winner">EQUAL WINNERS: SPDY & HTTP/2</span> <br><br>
-                    <span>The multiplexing support added in SPDY and HTTP/2 reduces the number of connections that have to be setup to download a page. As a side benefit web servers will not have to maintain as many active TCP connections when HTTP/2 usage becomes more widespread.</span>
+                    <span class="winner">Равнозначные победители: SPDY & HTTP/2</span> <br><br>
+                    <span>Алгоритм мультиплексирования дает возможность SPDY и HTTP/2 сократить кол-во соединений, требуемых для загрузки страницы</span>
                 </h3>
             </div>
 
         </section>
         <section class="Xsize-header">
-            <h3 class="title">Test #4: Page Load Time</h3>
-            <div class="wrap">
+            <h3 class="title">Тест #4: Время загрузки страницы</h3>
+            <div class="wrap fragment">
                 <img src="img/test_https_load.png" alt="" class="image -http">
                 <img src="img/test_spdy_load.png" alt="" class="image -spdy">
                 <img src="img/test_http2_load.png" alt="" class="image -http2">
             </div>
-            <div class="title-wrap">
+            <div class="title-wrap fragment">
                 <h3 class="desc">
-                    <span class="winner">WINNER HTTP/2</span><br><br><br>
-                    <span>The Page Load timing was worse for raw HTTPS probably due to the lack of header compression and the additional TCP connections and SSL Handshakes required. For more complex pages the speed advantage of SPDY and HTTP/2 should be even greater.</span>
+                    <span class="winner">ПОБЕДИТЕЛЬ HTTP/2</span><br><br><br>
+                    <span>Время загрузки страницы для обычного HTTPS было хуже из-за отсутствия технологии сжатия заголовков и требования дополнительных TCP-соединений и SSL Handshakes</span>
                 </h3>
             </div>
 
         </section>
         <section>
-            <a href="http://www.http2demo.io" title="sex">Demo example http/2</a>
+            <a href="http://www.http2demo.io" title="Demo" style="font-size: 60px">Demo example HTTP/2</a>
+        </section>
+        <section class="final-slide">
+            <h3 class="fragment">HTTP/2</h3>
+            <h3 class="fragment">THE FUTURE</h3>
+            <h3 class="fragment">IS</h3>
+            <h3 class="fragment">HERE</h3>
         </section>
     </div>
 </div>
@@ -341,5 +253,45 @@
         maxScale: 1
     });
 </script>
+<!--<section class="compare-table">-->
+    <!--<table>-->
+        <!--<tbody>-->
+        <!--<tr>-->
+            <!--<th>HTTP 1.x</th>-->
+            <!--<th>SPDY</th>-->
+            <!--<th>HTTP2</th>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>SSL не требуется, но рекомендуется.</td>-->
+            <!--<td>Необходим SSL.</td>-->
+            <!--<td>SSL не требуется, но рекомендуется.</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>Медленное шифрование.</td>-->
+            <!--<td>Быстрое шифрование.</td>-->
+            <!--<td>Шифрование стало ещё быстрее.</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>Один клиент-серверный запрос на одно TCP-соединение.</td>-->
+            <!--<td>Много клиент-серверных запросов на одно TCP-соединение. Осуществляются одновременно на одном-->
+                <!--хосте.-->
+            <!--</td>-->
+            <!--<td>Многохостовое мультиплексирование. Осуществляются на нескольких хостах в одном экземпляре.</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>Нет сжатия заголовков.</td>-->
+            <!--<td>Введено сжатие заголовков.</td>-->
+            <!--<td>Используются улучшенные алгоритмы сжатия заголовков, что повышает производительность и-->
+                <!--безопасность.-->
+            <!--</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>Нет приоритезации потоков.</td>-->
+            <!--<td>Введена приоритезация потоков.</td>-->
+            <!--<td>Улучшенные механизмы приоритезации потоков.</td>-->
+        <!--</tr>-->
+        <!--</tbody>-->
+    <!--</table>-->
+<!--</section>-->
 </body>
 </html>

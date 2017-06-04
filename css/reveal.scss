@@ -1471,63 +1471,88 @@ body {
 .multiplex {
 	display: flex !important;
 
+	.main {
+		display: flex !important;
+		flex-direction: column;
+		align-items: center;
+	}
+
+
 	.image {
 		display: flex;
-		width: 520px;
-		height: 707px;
 		margin: auto 0;
-
+		width: 30%;
 	}
 	.key-points {
-		font-size: 36px;
-		margin: 0 120px;
+		margin: auto 120px;
+		.point {
+			font-size: 40px;
+			margin: 50px 0;
+		}
 	}
 }
 
 .server-push {
 	display: flex !important;
+
+	.main {
+		display: flex !important;
+		flex-direction: column;
+		align-items: center;
+	}
 	.image {
-		width: 780px;
-		height: 440px;
+		display: flex;
 		margin: auto 0;
+		width: 60%;
 	}
 	.key-points {
-		font-size: 30px;
-		margin: 0 120px;
+		margin: auto 120px;
+		.point {
+			font-size: 40px;
+			margin: 50px 0;
+		}
 	}
 }
 
 .binary-nature {
 	display: flex !important;
-	.wrap {
-		margin: auto 0;
-		background-color: white;
-		height: auto;
-
-
+	.main {
+		display: flex !important;
+		flex-direction: column;
+		align-items: center;
 	}
 	.image {
-		width: 100%;
-		padding: 50px 0;
-		margin: 0;
-		height: 140px;
+		display: flex;
+		margin: auto 0;
+		width: 60%;
 	}
 	.key-points {
-		font-size: 26px;
-		margin: 0 50px;
+		margin: auto 120px;
+		.point {
+			font-size: 40px;
+			margin: 50px 0;
+		}
 	}
 }
 
 .h-pack {
 	display: flex !important;
+	.main {
+		display: flex !important;
+		flex-direction: column;
+		align-items: center;
+	}
 	.image {
-		width: 780px;
-		height: 400px;
+		display: flex;
 		margin: auto 0;
+		width: 65%;
 	}
 	.key-points {
-		font-size: 30px;
-		margin: 0 120px;
+		margin: auto 120px;
+		.point {
+			font-size: 40px;
+			margin: 50px 0;
+		}
 	}
 }
 
@@ -1552,6 +1577,7 @@ body {
 		width: 50%;
 		height: auto;
 		flex-direction: column;
+		align-self: flex-start;
 
 		.image {
 			display: flex;
@@ -1638,3 +1664,17 @@ body {
 		}
 	}
 }
+
+.final-slide {
+	background: url('../img/final.jpg') no-repeat;
+	background-size: contain;
+	display: flex !important;
+	flex-direction: column;
+	//padding: 50px 0;
+	align-content: space-around;
+	h3 {
+		display: block;
+		margin: 3% 0 !important;
+	}
+}
+
